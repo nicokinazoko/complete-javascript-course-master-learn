@@ -100,3 +100,8 @@ console.log('Indonesia has less people than the average country : ', isLessPeopl
 let description = country + ' is in ' + continent + ', and its ' + population +
     ' million people speak ' + language
 console.log(description)
+
+
+
+
+

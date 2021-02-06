@@ -111,44 +111,72 @@
 
        ////===================LECTURE: Basic Operators================
 
-       //MATH OPERATORS
-       //example 
-       //using minus Operators
+       // //MATH OPERATORS
+       // //example 
+       // //using minus Operators
+       // const now = 2020
+       // const ageNico = now - 1998
+       // const ageSarah = now - 2018
+       // console.log(ageNico, ageSarah)
+
+       // //example
+       // //using times operator (*) and divide (/), exponen
+       // console.log(ageNico * 2, ageNico / 10, 2 ** 3)
+       // //2 ** 3 means 2 to the power of 3 = 2 x 2 x 2
+
+       // //example
+       // //plus operator
+       // // to join string
+       // const firstName = 'Nico'
+       // const lastName = 'Kinazoko'
+       // console.log(firstName + ' ' + lastName)
+
+       // //ASSIGNMENT OPERATOR
+       // //EXAMPLE
+       // let x = 10 + 5
+
+       // x += 10 //+= use for x = x + 10
+       // x *= 4 // means x = x * 4. Should be 100
+       // x++ // means x = x + 1. Should be 101
+       // x-- // means x = x - 1. Should be 100
+       // console.log(x)
+
+       // //COMPARISON OPERATORS
+       // //EXAMPLE
+       // console.log(ageNico > ageSarah) //meaning is ageNico is greater than ageSarah
+       // //another operator : >, <, >=, <= 
+
+       // //example
+       // console.log(ageSarah >= 18)
+
+       // //store result 
+       // const isFullAge = ageSarah >= 18
+       // console.log(now - 1998 > now - 2020)
+
+
+       //================Operator Precedence============================
+
+       //Precedence means which operator do first 
+       //re declare again age
        const now = 2020
        const ageNico = now - 1998
        const ageSarah = now - 2018
-       console.log(ageNico, ageSarah)
 
-       //example
-       //using times operator (*) and divide (/), exponen
-       console.log(ageNico * 2, ageNico / 10, 2 ** 3)
-       //2 ** 3 means 2 to the power of 3 = 2 x 2 x 2
-
-       //example
-       //plus operator
-       // to join string
-       const firstName = 'Nico'
-       const lastName = 'Kinazoko'
-       console.log(firstName + ' ' + lastName)
-
-       //ASSIGNMENT OPERATOR
-       //EXAMPLE
-       let x = 10 + 5
-
-       x += 10 //+= use for x = x + 10
-       x *= 4 // means x = x * 4. Should be 100
-       x++ // means x = x + 1. Should be 101
-       x-- // means x = x - 1. Should be 100
-       console.log(x)
-
-       //COMPARISON OPERATORS
-       //EXAMPLE
-       console.log(ageNico > ageSarah) //meaning is ageNico is greater than ageSarah
-       //another operator : >, <, >=, <= 
-
-       //example
-       console.log(ageSarah >= 18)
-
-       //store result 
-       const isFullAge = ageSarah >= 18
+       //output
        console.log(now - 1998 > now - 2020)
+
+       //example
+       //left-to-right
+       console.log(25 - 10 - 5)
+
+       //example
+       //right-to-left
+       let x, y
+       x = y = 25 - 10 - 5 //x = y = 10, x = 10
+
+       //Output
+       console.log(x, y)
+
+       //declare average age
+       const averageAge = (ageNico + ageSarah) / 2
+       console.log(ageNico, ageSarah, averageAge)

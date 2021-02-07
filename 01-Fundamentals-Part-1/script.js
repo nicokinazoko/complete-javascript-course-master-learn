@@ -156,27 +156,63 @@
 
        //================Operator Precedence============================
 
-       //Precedence means which operator do first 
-       //re declare again age
-       const now = 2020
-       const ageNico = now - 1998
-       const ageSarah = now - 2018
+       // //Precedence means which operator do first 
+       // //re declare again age
+       // const now = 2020
+       // const ageNico = now - 1998
+       // const ageSarah = now - 2018
 
-       //output
-       console.log(now - 1998 > now - 2020)
+       // //output
+       // console.log(now - 1998 > now - 2020)
 
-       //example
-       //left-to-right
-       console.log(25 - 10 - 5)
+       // //example
+       // //left-to-right
+       // console.log(25 - 10 - 5)
 
-       //example
-       //right-to-left
-       let x, y
-       x = y = 25 - 10 - 5 //x = y = 10, x = 10
+       // //example
+       // //right-to-left
+       // let x, y
+       // x = y = 25 - 10 - 5 //x = y = 10, x = 10
 
-       //Output
-       console.log(x, y)
+       // //Output
+       // console.log(x, y)
 
-       //declare average age
-       const averageAge = (ageNico + ageSarah) / 2
-       console.log(ageNico, ageSarah, averageAge)
+       // //declare average age
+       // const averageAge = (ageNico + ageSarah) / 2
+       // console.log(ageNico, ageSarah, averageAge)
+
+
+       //================ String and Template Literals =================
+
+       //declare variable
+       const firstName = 'Nico'
+       const job = 'College Students'
+       const birthYear = 1998
+       const year = 2021
+
+       //concatenate strings
+       const nico = "I'm " + firstName + ", a " + (year - birthYear) + ' years old ' + job + '!'
+
+       //output nico
+       console.log(nico)
+
+       //using template literals
+       const nicoNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}! `
+
+       //output data
+       console.log(nicoNew)
+
+       //using backtick for irregular strings
+       console.log(`Just a regular String`)
+
+       //multi line string
+       console.log('String with \n\
+                     multiple \n\
+                     lines')
+
+       //using template literals for 
+       console.log(`
+       String
+       multiple
+       lines
+       `)                     

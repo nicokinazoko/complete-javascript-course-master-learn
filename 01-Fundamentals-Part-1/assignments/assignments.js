@@ -102,6 +102,13 @@ let description = country + ' is in ' + continent + ', and its ' + population +
 console.log(description)
 
 
+console.log(`LECTURE: Strings and Template Literals`)
+// 1. Recreate the 'description' variable from the last assignment, this time 
+// using the template literal syntax
 
+//ANSWER
+
+const descriptionNew = `${country} is in ${continent} and its ${population} million speak ${language}`
+console.log(descriptionNew)
 
 

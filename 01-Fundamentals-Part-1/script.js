@@ -184,35 +184,91 @@
 
        //================ String and Template Literals =================
 
-       //declare variable
-       const firstName = 'Nico'
-       const job = 'College Students'
-       const birthYear = 1998
-       const year = 2021
+       // //declare variable
+       // const firstName = 'Nico'
+       // const job = 'College Students'
+       // const birthYear = 1998
+       // const year = 2021
 
-       //concatenate strings
-       const nico = "I'm " + firstName + ", a " + (year - birthYear) + ' years old ' + job + '!'
+       // //concatenate strings
+       // const nico = "I'm " + firstName + ", a " + (year - birthYear) + ' years old ' + job + '!'
 
-       //output nico
-       console.log(nico)
+       // //output nico
+       // console.log(nico)
 
-       //using template literals
-       const nicoNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}! `
+       // //using template literals
+       // const nicoNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}! `
 
-       //output data
-       console.log(nicoNew)
+       // //output data
+       // console.log(nicoNew)
 
-       //using backtick for irregular strings
-       console.log(`Just a regular String`)
+       // //using backtick for irregular strings
+       // console.log(`Just a regular String`)
 
-       //multi line string
-       console.log('String with \n\
-                     multiple \n\
-                     lines')
+       // //multi line string
+       // console.log('String with \n\
+       //               multiple \n\
+       //               lines')
 
-       //using template literals for 
-       console.log(`
-       String
-       multiple
-       lines
-       `)                     
+       // //using template literals for 
+       // console.log(`
+       // String
+       // multiple
+       // lines
+       // `)                     
+
+       //================ Taking Decisions: if / else Statements =================
+
+       //example
+       // const age = 22
+
+       // //check using if statement
+       // if (age >= 18) {
+       //        console.log(`Sarah can start driving license 😂`)
+       // } else {
+       //        const yearsLeft = 18 - age
+       //        console.log(`Sarah is too young, wait another ${yearsLeft} years`)
+       // }
+
+       // //another example    
+       // const birthYear = 1998
+       // let century
+       // if (birthYear <= 2000) {
+       //        century = 20
+       // } else {
+       //        century = 21
+       // }
+
+       // console.log(century)
+
+
+       //================ Type Conversion and Coercion =================
+       //conversion : convert one into another
+       //coercion : javascript automatically converts
+
+       //example
+       //type conversion
+       const inputYear = `1998`
+       //convert into number
+       console.log(Number(inputYear))
+
+       console.log(Number(inputYear) + 18)
+
+       console.log(Number('Nico'))
+       console.log(typeof NaN)
+
+       console.log(String(23))
+
+
+       //type coersion
+       //example
+       console.log('I am ' + 23 + ' years Old' )
+       console.log(`I am ${23} years old`)
+       console.log('23' - '10' - 3 )
+       console.log('23' * '2')
+       console.log('23' > '18')
+
+       //let guess
+       let n = '1' + 1
+       n = n - 1
+       console.log(n)

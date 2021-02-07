@@ -1,33 +1,35 @@
-//declare for result
-let markHigherBMI 
+// console.log(`\nChallenge 1`)
 
-//TEST DATA 1
+// //declare for result
+// let markHigherBMI 
 
-//Data Mark
-// const massMark = 78
-// const heightMark = 1.69
+// //TEST DATA 1
 
-// // //Data John
-// const massJohn = 92
-// const heightJohn = 1.95
+// //Data Mark
+// // const massMark = 78
+// // const heightMark = 1.69
 
-//TEST DATA 2
+// // // //Data John
+// // const massJohn = 92
+// // const heightJohn = 1.95
 
-//Data Mark
-const massMark = 95
-const heightMark = 1.88
+// //TEST DATA 2
 
-//Data John
-const massJohn = 85
-const heightJohn = 1.76
+// //Data Mark
+// const massMark = 95
+// const heightMark = 1.88
 
-//declare bmi to store BMI data
-const bmiMark = massMark / heightMark ** 2
-const bmiJohn = massJohn / heightJohn ** 2
+// //Data John
+// const massJohn = 85
+// const heightJohn = 1.76
 
-//show result for mark bmi is higher than john
+// //declare bmi to store BMI data
+// const bmiMark = massMark / heightMark ** 2
+// const bmiJohn = massJohn / heightJohn ** 2
 
-markHigherBMI = bmiMark > bmiJohn
-console.log(markHigherBMI)
+// //show result for mark bmi is higher than john
+
+// markHigherBMI = bmiMark > bmiJohn
+// console.log(markHigherBMI)
 
 

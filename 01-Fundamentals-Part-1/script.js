@@ -248,27 +248,108 @@
 
        //example
        //type conversion
-       const inputYear = `1998`
-       //convert into number
-       console.log(Number(inputYear))
+       // const inputYear = `1998`
+       // //convert into number
+       // console.log(Number(inputYear))
 
-       console.log(Number(inputYear) + 18)
+       // console.log(Number(inputYear) + 18)
 
-       console.log(Number('Nico'))
-       console.log(typeof NaN)
+       // console.log(Number('Nico'))
+       // console.log(typeof NaN)
 
-       console.log(String(23))
+       // console.log(String(23))
 
 
-       //type coersion
-       //example
-       console.log('I am ' + 23 + ' years Old' )
-       console.log(`I am ${23} years old`)
-       console.log('23' - '10' - 3 )
-       console.log('23' * '2')
-       console.log('23' > '18')
+       // //type coersion
+       // //example
+       // console.log('I am ' + 23 + ' years Old')
+       // console.log(`I am ${23} years old`)
+       // console.log('23' - '10' - 3)
+       // console.log('23' * '2')
+       // console.log('23' > '18')
 
-       //let guess
-       let n = '1' + 1
-       n = n - 1
-       console.log(n)
+       // //let guess
+       // let n = '1' + 1
+       // n = n - 1
+       // console.log(n)
+
+
+
+       //================ Truthy and Falsy Values =================
+       // 5 type of false : 0, '', undefined, null, NaN
+
+       console.log(Boolean(0));
+       console.log(Boolean(undefined));
+       console.log(Boolean('Jonas'));
+       console.log(Boolean({}));
+       console.log(Boolean(''));
+
+
+       //example 
+       // const money = 100;
+       // if (money) {
+       //        console.log("Don't Spend it all ;)");
+       // }
+       // else{
+       //        console.log("You should get a job");
+       // }
+
+       // // another example
+       // let height = 123;
+       // if(height) {
+       //        console.log("YAY. Height is defined");
+       // }
+       // else{
+       //        console.log("Height is Undefined");
+       // }
+
+
+
+       //================ Equality Operators: == vs. === =================
+
+       // EXAMPLE
+       const age = '18';
+       if (age === 18) console.log('You just became a adult');
+       if (age == 18) console.log('You just became a adult (loose)');
+
+
+       // === called strict operator that only return true when both values are exactly the same
+       // == called loose equality operator that do the coercion (convert same values whatever the variable types)
+       // always use strict equality for comparing 
+
+       // example
+       console.log('18' == 18); // result is true
+       console.log('18' === 18); // result is false
+
+
+       // get value from webpage
+       // using prompt
+       // to store the data declare the variable
+       // example
+
+       const favourite = prompt("What is your favourite number?");
+       console.log(typeof favourite);
+
+       //try to compare
+       if (favourite === 23) {
+              console.log("Cool! 23 is an amazing number");
+       } // it doesnt show because favourite is a string compare to number
+       else
+       if (favourite === 7) {
+              console.log("Cool! 7 is an awesome number");
+       }
+       else
+       if (favourite === 9) {
+              console.log("Cool! 9 is an awesome number");
+       }
+       else{
+              console.log("7 or 9 or 23 is not number");
+       }
+
+       // if using not compare, there are 2 types, loose and strict
+       // strict is !==
+       // loose is !=
+
+       if(favourite !== 23){
+              console.log("Why not 23?");
+       }

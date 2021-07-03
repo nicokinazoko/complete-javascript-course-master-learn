@@ -278,11 +278,11 @@
        //================ Truthy and Falsy Values =================
        // 5 type of false : 0, '', undefined, null, NaN
 
-       console.log(Boolean(0));
-       console.log(Boolean(undefined));
-       console.log(Boolean('Jonas'));
-       console.log(Boolean({}));
-       console.log(Boolean(''));
+       // console.log(Boolean(0));
+       // console.log(Boolean(undefined));
+       // console.log(Boolean('Jonas'));
+       // console.log(Boolean({}));
+       // console.log(Boolean(''));
 
 
        //example 
@@ -307,49 +307,136 @@
 
        //================ Equality Operators: == vs. === =================
 
-       // EXAMPLE
-       const age = '18';
-       if (age === 18) console.log('You just became a adult');
-       if (age == 18) console.log('You just became a adult (loose)');
+       // // EXAMPLE
+       // const age = '18';
+       // if (age === 18) console.log('You just became a adult');
+       // if (age == 18) console.log('You just became a adult (loose)');
 
 
-       // === called strict operator that only return true when both values are exactly the same
-       // == called loose equality operator that do the coercion (convert same values whatever the variable types)
-       // always use strict equality for comparing 
+       // // === called strict operator that only return true when both values are exactly the same
+       // // == called loose equality operator that do the coercion (convert same values whatever the variable types)
+       // // always use strict equality for comparing 
+
+       // // example
+       // console.log('18' == 18); // result is true
+       // console.log('18' === 18); // result is false
+
+
+       // // get value from webpage
+       // // using prompt
+       // // to store the data declare the variable
+       // // example
+
+       // const favourite = prompt("What is your favourite number?");
+       // console.log(typeof favourite);
+
+       // //try to compare
+       // if (favourite === 23) {
+       //        console.log("Cool! 23 is an amazing number");
+       // } // it doesnt show because favourite is a string compare to number
+       // else
+       // if (favourite === 7) {
+       //        console.log("Cool! 7 is an awesome number");
+       // }
+       // else
+       // if (favourite === 9) {
+       //        console.log("Cool! 9 is an awesome number");
+       // }
+       // else{
+       //        console.log("7 or 9 or 23 is not number");
+       // }
+
+       // // if using not compare, there are 2 types, loose and strict
+       // // strict is !==
+       // // loose is !=
+
+       // if(favourite !== 23){
+       //        console.log("Why not 23?");
+       // }
+
+
+       //================ Boolean Logic =================
+
+       // Operator AND
+       // return TRUE when both conditions are true
+
+       // Operator OR
+       // return FALSE when both conditions are false
+
+       // Operator NOT
+       // return revert values of the conditions
+       // FALSE become TRUE
+       // TRUE becomes FALSE
 
        // example
-       console.log('18' == 18); // result is true
-       console.log('18' === 18); // result is false
+       // const age = 16;
+       // const A = age >= 20;
+       // const B = age < 30;
+       // const notA = !age;
+       // const notB = 
+
+       // console.log(`${A}`);
 
 
-       // get value from webpage
-       // using prompt
-       // to store the data declare the variable
+       //================ Logical Operators =================
+       // const hasDriverLicense = true; //Statement A
+       // const hasGoodVision = true; // Statement B
+
+       // // example
+       // // AND operator (&&)
+       // console.log(hasDriverLicense && hasGoodVision);
+
+       // // using OR operator ( || )
+       // console.log(hasDriverLicense || hasGoodVision);
+
+       // // NOT operator (!)
+       // console.log(!hasDriverLicense);
+
+       // // test logic
+       // const shouldDrive = hasDriverLicense && hasGoodVision;
+
+       // if (shouldDrive) {
+       //        console.log(`Sarah is able to drive`);
+       // } else {
+       //        console.log(`Someone else should drive...`);
+       // }
+
+       // // add another variable
+       // const isTired = false; // Statement C
+       // console.log(hasDriverLicense && hasGoodVision && isTired);
+
+       // // logic test
+       // if (hasDriverLicense && hasGoodVision && !isTired) {
+       //        console.log(`Sarah is able to drive`);
+       // } else {
+       //        console.log(`Someone else should drive...`);
+       // }
+
+
+
+       //================ The switch Statement =================
+
        // example
+       const day = 'Thursday';
 
-       const favourite = prompt("What is your favourite number?");
-       console.log(typeof favourite);
-
-       //try to compare
-       if (favourite === 23) {
-              console.log("Cool! 23 is an amazing number");
-       } // it doesnt show because favourite is a string compare to number
-       else
-       if (favourite === 7) {
-              console.log("Cool! 7 is an awesome number");
-       }
-       else
-       if (favourite === 9) {
-              console.log("Cool! 9 is an awesome number");
-       }
-       else{
-              console.log("7 or 9 or 23 is not number");
-       }
-
-       // if using not compare, there are 2 types, loose and strict
-       // strict is !==
-       // loose is !=
-
-       if(favourite !== 23){
-              console.log("Why not 23?");
+       switch (day) {
+              case 'Monday': //meaning day === 'Monday'
+                     console.log(`Plan course structure`);
+                     console.log(`Go to coding meetup`);
+                     break;
+              case 'Tuesday': //meaning day === 'Tuesday'
+                     console.log(`Prepare theory video`);
+                     break;
+              case 'Wednesday': //meaning day === 'Wednesday'
+              case 'Thursday': //meaning day === 'Thursday'
+                     console.log(`Write Code Example`);
+                     break;
+              case 'Friday': //meaning day === 'Friday'
+                     console.log(`Record Videos`);
+                     break;
+              case 'Saturday': //meaning day === 'Saturday'
+              case 'Sunday': //meaning day === 'Sunday'
+                     console.log('Enjoy the weekend');
+              default:
+                     console.log(`Not a valid day`);
        }

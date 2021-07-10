@@ -417,26 +417,80 @@
        //================ The switch Statement =================
 
        // example
-       const day = 'Thursday';
+       // const day = 'Thursday';
 
-       switch (day) {
-              case 'Monday': //meaning day === 'Monday'
-                     console.log(`Plan course structure`);
-                     console.log(`Go to coding meetup`);
-                     break;
-              case 'Tuesday': //meaning day === 'Tuesday'
-                     console.log(`Prepare theory video`);
-                     break;
-              case 'Wednesday': //meaning day === 'Wednesday'
-              case 'Thursday': //meaning day === 'Thursday'
-                     console.log(`Write Code Example`);
-                     break;
-              case 'Friday': //meaning day === 'Friday'
-                     console.log(`Record Videos`);
-                     break;
-              case 'Saturday': //meaning day === 'Saturday'
-              case 'Sunday': //meaning day === 'Sunday'
-                     console.log('Enjoy the weekend');
-              default:
-                     console.log(`Not a valid day`);
+       // switch (day) {
+       //        case 'Monday': //meaning day === 'Monday'
+       //               console.log(`Plan course structure`);
+       //               console.log(`Go to coding meetup`);
+       //               break;
+       //        case 'Tuesday': //meaning day === 'Tuesday'
+       //               console.log(`Prepare theory video`);
+       //               break;
+       //        case 'Wednesday': //meaning day === 'Wednesday'
+       //        case 'Thursday': //meaning day === 'Thursday'
+       //               console.log(`Write Code Example`);
+       //               break;
+       //        case 'Friday': //meaning day === 'Friday'
+       //               console.log(`Record Videos`);
+       //               break;
+       //        case 'Saturday': //meaning day === 'Saturday'
+       //        case 'Sunday': //meaning day === 'Sunday'
+       //               console.log('Enjoy the weekend');
+       //        default:
+       //               console.log(`Not a valid day`);
+       // }
+
+
+
+       //================ Statements and Expressions =================
+
+       //statement and expressions is different
+       // example       
+       // if(23 > 10){
+       //        const str = `23 is bigger`;
+       // }
+
+       // // statement = const str = 23 is bigger 
+       // // expressions = 23 is bigger
+
+       // // demo
+       // console.log(`I'm ${2037 - 1991} years old`);
+
+       // // ${} is some expressions
+       // // example
+       // const me = `Nico`;
+       // console.log(`I'm ${2037 - 1991} years old ${me}`);
+
+
+
+       //================ The Conditional (Ternary) Operator =================
+
+       // writing if else but in 1 line
+       //example
+
+       const age = 15;
+       //notation
+       // condition ? statement 1 : statement 2
+       age >= 18 ? console.log(`I like to drink wine 🍷`) : console.log(`I like to drink water 💧`);
+
+       //example
+       const drink = age >= 18 ? `Wine 🍷` : `Water 💦`;
+       console.log(drink);
+
+       //with if else
+       let drink2;
+       if (age >= 18) {
+              drink2 = `Wine 🍷`;
+       } else {
+              drink2 = `Water 💦`;
        }
+
+       console.log(drink2);
+
+       // can using ternary operator in expression
+       // example
+       console.log(`I like to drink ${age >= 18 ? `Wine 🍷` : `Water 💦`}`);
+
+       // stil need if else statement
+       

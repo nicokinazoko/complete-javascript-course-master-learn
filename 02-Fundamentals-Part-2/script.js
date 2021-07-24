@@ -98,14 +98,96 @@
 
     //================ Arrow Functions =================
     // // don't forget to use strict
-    'use strict';
+    // 'use strict';
 
-    // faster to ride
+    // // faster to ride
+
+    // // example
+    // const calcAge2 = function calcAge1(birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // // notation
+    // const calcAge3 = birthYear => 2037 - birthYear;
+
+    // // calling function
+    // const age3 = calcAge3(1991);
+    // console.log(age3);
+
+
+    // // Example
+    // // years until retirement
+    // const yearUntilRetirement = (birthYear, firstName) => {
+    //     const age = 2037 - birthYear;
+    //     const retirement = 65 - age;
+    //     return `${firstName} retires in ${retirement} years`;
+    // }
+
+    // console.log(yearUntilRetirement(1991, 'Nico'));
+    // console.log(yearUntilRetirement(1980, 'Bob'));
+
+
+
+
+
+    //================ Functions Calling Other Functions =================
+    // // // don't forget to use strict
+    // 'use strict';
+
+    // function cutFruitPieces(fruit) {
+    //     return fruit * 4;
+    // }
+
+    // function fruitProccessor(apples, oranges) {
+    //     const applePieces= cutFruitPieces(apples);
+    //     const orangePieces = cutFruitPieces(oranges);
+    //     console.log(apples, oranges);
+    //     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
+    //     return juice;
+    // }
+
+    // console.log(fruitProccessor(2,3));
+
+
+
+
+
+
+    //================     Functions Calling Other Functions =================
+    // // don't forget to use strict
+    // 'use strict';
 
     // example
-    const calcAge2 = function calcAge1(birthYear) {
-        return 2037 - birthYear;
-    }
+    // arrow expressions
+    // const yearUntilRetirement = (birthYear, firstName) => {
+    //     const age = 2037 - birthYear;
+    //     const retirement = 65 - age;
+    //     return `${firstName} retires in ${retirement} years`;
+    // }
 
-    // notation
-    const calcAge3 = birthYear => 2037 - birthYear;
+    // separate age into different function
+    // const calcAge = function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // // regular expressions
+    // const yearUntilRetirement = function (birthYear, firstName) {
+    //     const age = calcAge(birthYear);
+    //     const retirement = 65 - age;
+
+    //     if (retirement > 0) {
+    //         console.log(`${firstName} retires in ${retirement} years`);
+    //         return retirement;
+    //     } else {
+    //         console.log(`${firstName} is already retired 🎉`);
+    //         return -1;
+    //     }
+
+    // }
+
+    // console.log(yearUntilRetirement(1991, 'Nico'));
+
+
+
+    // console.log(yearUntilRetirement(1991, 'Nico'));
+    // console.log(yearUntilRetirement(1950, 'Bob'));

@@ -9,7 +9,7 @@
     // example
 
 
-    // 'use strict';
+    'use strict';
 
     // let hasDriversLicense = false;
     // const passTest = true;
@@ -270,75 +270,163 @@
 
     // some of array methods
 
-    const friends = ['Michael', 'Steven', 'Peter'];
+    // const friends = ['Michael', 'Steven', 'Peter'];
 
-    // ===== ADD ELEMENTS =====
-    // PUSH
-    // add elements in the end of the array
-    // if push assigned to variable, it will returns the length of the array after insertion
+    // // ===== ADD ELEMENTS =====
+    // // PUSH
+    // // add elements in the end of the array
+    // // if push assigned to variable, it will returns the length of the array after insertion
 
-    // notation
-    // example
-    const newLength = friends.push('Jay');
+    // // notation
+    // // example
+    // const newLength = friends.push('Jay');
 
-    // output
-    console.log(friends);
-    console.log(newLength);
-
-
-    // UNSHIFT
-    // add elements in the beginning
-
-    // notation
-    // example
-    friends.unshift('John');
-    console.log(friends);
+    // // output
+    // console.log(friends);
+    // console.log(newLength);
 
 
-    // ===== REMOVE ELEMENTS =====
+    // // UNSHIFT
+    // // add elements in the beginning
 
-    // POP
-    // remove last element of the array
-    // if pop assigned to variable, it will returns the element which is removed
-    friends.pop();
-    const popped = friends.pop();
-
-    // output
-    console.log(friends);
-    console.log(popped);
+    // // notation
+    // // example
+    // friends.unshift('John');
+    // console.log(friends);
 
 
-    // SHIFT
-    // remove the first element of the array
-    friends.shift();
-    console.log(friends);
+    // // ===== REMOVE ELEMENTS =====
+
+    // // POP
+    // // remove last element of the array
+    // // if pop assigned to variable, it will returns the element which is removed
+    // friends.pop();
+    // const popped = friends.pop();
+
+    // // output
+    // console.log(friends);
+    // console.log(popped);
 
 
-    // array.INDEXOF()
-    // use to know which position of a certain element
-    console.log(friends.indexOf('Steven'));
-
-    // if the elements is not in the array, result is -1
-    console.log(friends.indexOf('Bob'));
+    // // SHIFT
+    // // remove the first element of the array
+    // friends.shift();
+    // console.log(friends);
 
 
+    // // array.INDEXOF()
+    // // use to know which position of a certain element
+    // console.log(friends.indexOf('Steven'));
 
-    // INCLUDES
-    // return true if the element is in the array, false if it isn't
-    console.log(friends.includes('Steven'));
-    console.log(friends.includes('Bob'));
+    // // if the elements is not in the array, result is -1
+    // console.log(friends.indexOf('Bob'));
 
-    // if psuh the number and want to use include method, then result is false
-    // example
-    friends.push(23);
-    console.log(friends.includes('23'));
-    // because 23 in console.log is string-type and 23 in the push is a number
 
-    // but if without ' ' then result is should be true
-    console.log(friends.includes(23));
-    
 
-    // write include with conditional
-    if(friends.includes('Steven')){
-        console.log(`You have a friend called Steven`);
+    // // INCLUDES
+    // // return true if the element is in the array, false if it isn't
+    // console.log(friends.includes('Steven'));
+    // console.log(friends.includes('Bob'));
+
+    // // if psuh the number and want to use include method, then result is false
+    // // example
+    // friends.push(23);
+    // console.log(friends.includes('23'));
+    // // because 23 in console.log is string-type and 23 in the push is a number
+
+    // // but if without ' ' then result is should be true
+    // console.log(friends.includes(23));
+
+
+    // // write include with conditional
+    // if(friends.includes('Steven')){
+    //     console.log(`You have a friend called Steven`);
+    // }
+
+
+
+
+    // ================ Introduction to Objects =================
+
+    // example array
+    // const nicoArray = [
+    //     'Nico',
+    //     'Nico',
+    //     2021 - 1998,
+    //     'College Student',
+    //     ['Michael', 'Peter', 'Steven']
+    // ];
+
+
+    // // notation object
+    // const nico = {
+    //     firstName: 'Nico',
+    //     lastName: 'Nico',
+    //     age: 2021 - 1998,
+    //     job: 'College Student',
+    //     friends: ['Michael', 'Peter', 'Steven']
+    // }
+
+
+
+
+    // ================ Dot vs.Bracket Notation =================
+
+
+    // notation object
+    const nico = {
+        firstName: 'Nico',
+        lastName: 'Nico',
+        age: 2021 - 1998,
+        job: 'College Student',
+        friends: ['Michael', 'Peter', 'Steven']
     }
+
+    // output data
+    console.log(nico);
+
+    // dot notation
+    console.log(nico.lastName);
+
+    // bracket notation
+    console.log(nico['lastName']);
+
+
+    // using bracket for expression
+    // example
+    const nameKey = 'Name';
+
+    console.log(nico['first' + nameKey]);
+    console.log(nico['last' + nameKey]);
+
+    // but doesnt work with expression in dot notation
+
+    // make a input field in pop up window
+    const interestedIn = prompt(`What do you want to know about Nico? Choose between first name, last name, age, job, and friends`);
+
+    // using bracket to use 
+    // because if using dot then the result is undefined
+
+    if (nico[interestedIn]) {
+        console.log(nico[interestedIn]);
+    } else {
+        console.log('Wrong Request. Choose between first name, last name, age, job, and friends');
+    }
+
+
+    // add new properties in object
+
+    // dot notation
+    nico.location = 'Indonesia';
+    nico['twitter'] = `@nico_kinazoko`;
+    console.log(nico);
+
+
+    // challenge
+    // Nico has 3 friends, and his best friends is called Michael
+
+    const string = `${nico.firstName} has ${nico.friends.length} friends , and his best friends is called ${nico.friends[0]}`;
+    const string1 = `${nico['firstName']} has ${nico['friends'].length} friends , and his best friends is called ${nico['friends'][0]}`;
+
+    console.log(string);
+    console.log(string1);

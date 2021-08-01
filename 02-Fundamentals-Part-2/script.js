@@ -191,3 +191,154 @@
 
     // console.log(yearUntilRetirement(1991, 'Nico'));
     // console.log(yearUntilRetirement(1950, 'Bob'));
+
+
+
+    //================ Introduction to Arrays =================
+
+    // // example
+    // const friend1 = 'Michael';
+    // const friend2 = 'Steven';
+    // const friend3 = 'Peter';
+
+    // // declaration of array
+    // const friends = ['Michael', 'Steven', 'Peter'];
+    // console.log(friends);
+
+
+    // // another declaration of array
+    // const y = new Array(1991, 1984, 2008, 2021);
+
+    // // output
+    // console.log(friends[0]);
+    // console.log(friends[1]);
+    // console.log(friends[2]);
+
+    // // to get the length of the array
+    // console.log(friends.length);
+
+    // // another method
+    // // can put any expression in bracket / []
+    // console.log(friends[friends.length - 1]);
+
+
+    // // mutate the array
+    // // example
+    // friends[2] = 'Jay';
+    // console.log(friends);
+
+
+    // // array can hold values at the same time
+    // // example
+    // const firstName = 'Nico';
+    // // can use inside the array
+    // const nico = [firstName, 'Nico', 2021 - 1998, 'College Student', friends];
+
+    // // output
+    // console.log(nico);
+    // console.log(nico.length);
+
+
+    // // array exercise
+    // // to use function to array
+    // const calcAge = function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // const years = [1990, 1967, 2002, 2010, 2018];
+
+    // console.log(calcAge(years));
+
+    // // cannot use the function with arrays
+    // // but can use the individual element of array
+
+    // // example
+    // const age1 = calcAge(years[0]);
+    // const age2 = calcAge(years[1]);
+    // const age3 = calcAge(years[years.length - 1]);
+
+    // console.log(age1, age2, age3);
+
+    // // make an array
+    // const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+
+    // console.log(ages);
+
+
+
+    // ================ Basic Array Operations (Methods) =================
+
+    // some of array methods
+
+    const friends = ['Michael', 'Steven', 'Peter'];
+
+    // ===== ADD ELEMENTS =====
+    // PUSH
+    // add elements in the end of the array
+    // if push assigned to variable, it will returns the length of the array after insertion
+
+    // notation
+    // example
+    const newLength = friends.push('Jay');
+
+    // output
+    console.log(friends);
+    console.log(newLength);
+
+
+    // UNSHIFT
+    // add elements in the beginning
+
+    // notation
+    // example
+    friends.unshift('John');
+    console.log(friends);
+
+
+    // ===== REMOVE ELEMENTS =====
+
+    // POP
+    // remove last element of the array
+    // if pop assigned to variable, it will returns the element which is removed
+    friends.pop();
+    const popped = friends.pop();
+
+    // output
+    console.log(friends);
+    console.log(popped);
+
+
+    // SHIFT
+    // remove the first element of the array
+    friends.shift();
+    console.log(friends);
+
+
+    // array.INDEXOF()
+    // use to know which position of a certain element
+    console.log(friends.indexOf('Steven'));
+
+    // if the elements is not in the array, result is -1
+    console.log(friends.indexOf('Bob'));
+
+
+
+    // INCLUDES
+    // return true if the element is in the array, false if it isn't
+    console.log(friends.includes('Steven'));
+    console.log(friends.includes('Bob'));
+
+    // if psuh the number and want to use include method, then result is false
+    // example
+    friends.push(23);
+    console.log(friends.includes('23'));
+    // because 23 in console.log is string-type and 23 in the push is a number
+
+    // but if without ' ' then result is should be true
+    console.log(friends.includes(23));
+    
+
+    // write include with conditional
+    if(friends.includes('Steven')){
+        console.log(`You have a friend called Steven`);
+    }

@@ -373,60 +373,287 @@
     // ================ Dot vs.Bracket Notation =================
 
 
-    // notation object
-    const nico = {
-        firstName: 'Nico',
-        lastName: 'Nico',
-        age: 2021 - 1998,
-        job: 'College Student',
-        friends: ['Michael', 'Peter', 'Steven']
-    }
+    // // notation object
+    // const nico = {
+    //     firstName: 'Nico',
+    //     lastName: 'Nico',
+    //     age: 2021 - 1998,
+    //     job: 'College Student',
+    //     friends: ['Michael', 'Peter', 'Steven']
+    // }
 
-    // output data
-    console.log(nico);
+    // // output data
+    // console.log(nico);
 
-    // dot notation
-    console.log(nico.lastName);
+    // // dot notation
+    // console.log(nico.lastName);
 
-    // bracket notation
-    console.log(nico['lastName']);
+    // // bracket notation
+    // console.log(nico['lastName']);
 
 
-    // using bracket for expression
+    // // using bracket for expression
+    // // example
+    // const nameKey = 'Name';
+
+    // console.log(nico['first' + nameKey]);
+    // console.log(nico['last' + nameKey]);
+
+    // // but doesnt work with expression in dot notation
+
+    // // make a input field in pop up window
+    // const interestedIn = prompt(`What do you want to know about Nico? Choose between first name, last name, age, job, and friends`);
+
+    // // using bracket to use 
+    // // because if using dot then the result is undefined
+
+    // if (nico[interestedIn]) {
+    //     console.log(nico[interestedIn]);
+    // } else {
+    //     console.log('Wrong Request. Choose between first name, last name, age, job, and friends');
+    // }
+
+
+    // // add new properties in object
+
+    // // dot notation
+    // nico.location = 'Indonesia';
+    // nico['twitter'] = `@nico_kinazoko`;
+    // console.log(nico);
+
+
+    // // challenge
+    // // Nico has 3 friends, and his best friends is called Michael
+
+    // const string = `${nico.firstName} has ${nico.friends.length} friends , and his best friends is called ${nico.friends[0]}`;
+    // const string1 = `${nico['firstName']} has ${nico['friends'].length} friends , and his best friends is called ${nico['friends'][0]}`;
+
+    // console.log(string);
+    // console.log(string1);
+
+
+
+
+
+
+    // ================ Object Methods =================
+
+    // basically function is an value
+    // so function can be inside the object
+
+    // // example
+    // const nico = {
+    //     firstName: 'Nico',
+    //     lastName: 'Nico',
+    //     birthYear: 1998,
+    //     job: 'College Student',
+    //     friends: ['Michael', 'Peter', 'Steven'],
+    //     hasDriversLicense: true,
+
+    //     // calcAge: function (birthYear) {
+    //     //     return 2037 - birthYear;
+    //     // }
+
+    //     // calcAge: function () {
+    //     //     // console.log(this);
+    //     //     return 2037 - this.birthYear;
+    //     // }
+
+    //     calcAge: function () {
+    //         this.age = 2037 - this.birthYear;
+    //         return this.age;
+    //     },
+
+    //     // using ternary operator
+    //     string: function () {
+    //         return `${this.firstName} is ${this.calcAge()}-years old ${this.job}, and 
+    //         he has ${this.hasDriversLicense  ? 'a' : 'no'} driver's license.`
+    //     },
+
+    //     // using function
+
+    //     getSummary: function () {
+    //         return `${this.firstName} is ${this.calcAge()}-years old ${this.job}, and 
+    //         he has ${this.hasDriversLicense  ? 'a' : 'no'} driver's license.`
+    //     }
+    // };
+
+    // // dot notation
+    // console.log(nico.calcAge());
+
+    // // bracket notation
+    // // console.log(nico['calcAge'](1998));
+
+    // console.log(nico.age);
+    // console.log(nico.age);
+    // console.log(nico.age);
+    // console.log(nico.age);
+
+
+
+    // // challenge
+    // // "Nico is 46-years old teacher, and he has a/no driver license"
+
+    // // answer 
+    // // my answer
+    // console.log(nico.string());
+
+    // // lecturer answer
+    // console.log(nico.getSummary());
+
+
+
+
+    // ================ Iteration: The for Loop =================
+
+    // loop statement
+    // for loops keeps running while condition is true
+    // notation
+    // for (let rep = 1; rep <= 30; rep++){
+    //     console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+    // }
+
+
+
+
+
+
+    // ================ Looping Arrays, Breaking and Continuing =================
+
+    // // example array
+    // const nicoArray = [
+    //     'Nico',
+    //     'Nico',
+    //     2021 - 1998,
+    //     'College Student',
+    //     ['Michael', 'Peter', 'Steven'],
+    //     true
+    // ];
+
+    // const types = [];
+
+    // for (let i = 0; i < nicoArray.length; i++) {
+    //     console.log(nicoArray[i], typeof nicoArray[i]);
+
+    //     // to add element in array
+    //     // types[i] = typeof nicoArray[i];
+
+    //     // another way
+    //     types.push(typeof nicoArray[i]);
+    // }
+
+    // console.log(types);
+
+    // const years = [1991, 2007, 1969, 2020];
+
+    // const ages = [];
+
+    // for (let i = 0; i < years.length; i++) {
+    //     ages.push(2037 - years[i]);
+    // }
+
+    // console.log(ages);
+
+
+    // // continue and break
+
+    // // continue
+    // // exit the current iteration and continue to the next one
+    // // basically skip the iteration
+
+    // // example
+    // console.log('ONLY STRING');
+    // for (let i = 0; i < nicoArray.length; i++) {
+    //     if (typeof nicoArray[i] !== 'string')
+    //         continue;
+
+
+    //     console.log(nicoArray[i], typeof nicoArray[i]);
+
+    //     // types.push(typeof nicoArray[i]);
+    // }
+
+    // // break
+    // // terminate the loop total
+
+    // // example
+    // console.log('BREAK NUMBER')
+    // for (let i = 0; i < nicoArray.length; i++) {
+    //     if (typeof nicoArray[i] === 'number')
+    //         break;
+
+
+    //     console.log(nicoArray[i], typeof nicoArray[i]);
+
+    //     // types.push(typeof nicoArray[i]);
+    // }
+
+
+
+
+    // ================ Looping Backwards and Loops in Loops =================
+
+    // // looping backwards
+    // const nicoArray = [
+    //     'Nico',
+    //     'Nico',
+    //     2021 - 1998,
+    //     'College Student',
+    //     ['Michael', 'Peter', 'Steven'],
+    //     true
+    // ];
+
+    // for (let i = nicoArray.length - 1; i >= 0; i--) {
+    //     console.log(i, nicoArray[i], typeof nicoArray[i]);
+    // }
+
+
+    // // loop inside loops
+
+    // // example
+    // for(let exercise = 1; exercise < 4; exercise++) {
+    //     console.log(`---------- Starting exercise ${exercise}`);
+
+    //     for(let rep = 1; rep < 6; rep++){
+    //         console.log(`Exercise ${exercise} : Lifting Weight repetition ${rep} 🏋️‍♀️`);
+    //     }
+    // }
+
+
+
+
+
+    // ================ The while Loop =================
+
     // example
-    const nameKey = 'Name';
+    // for (let rep = 1; rep <= 10; rep++) {
+    //     console.log(`Lifting weight repetition ${rep} 🏋️‍♀️`);
+    // }
 
-    console.log(nico['first' + nameKey]);
-    console.log(nico['last' + nameKey]);
+    // while notation
+    // example
 
-    // but doesnt work with expression in dot notation
-
-    // make a input field in pop up window
-    const interestedIn = prompt(`What do you want to know about Nico? Choose between first name, last name, age, job, and friends`);
-
-    // using bracket to use 
-    // because if using dot then the result is undefined
-
-    if (nico[interestedIn]) {
-        console.log(nico[interestedIn]);
-    } else {
-        console.log('Wrong Request. Choose between first name, last name, age, job, and friends');
-    }
+    // let rep = 1;
+    // while (rep <= 10) {
+    //     console.log(`Lifting weight repetition ${rep} 🏋️‍♀️`);
+    //     rep++;
+    // }
 
 
-    // add new properties in object
+    // not depend a variable
+    // example
+    // roll a dice until 6
+    // if got 6, it stopped
 
-    // dot notation
-    nico.location = 'Indonesia';
-    nico['twitter'] = `@nico_kinazoko`;
-    console.log(nico);
+    // make a dice consist of 1 to 6
+    // let dice = Math.trunc(Math.random() * 6) + 1;
+    // // console.log(dice);
 
+    // while (dice !== 6) {
+    //     console.log(`You Rolled a ${dice}`);
+    //     dice = Math.trunc(Math.random() * 6) + 1;
 
-    // challenge
-    // Nico has 3 friends, and his best friends is called Michael
-
-    const string = `${nico.firstName} has ${nico.friends.length} friends , and his best friends is called ${nico.friends[0]}`;
-    const string1 = `${nico['firstName']} has ${nico['friends'].length} friends , and his best friends is called ${nico['friends'][0]}`;
-
-    console.log(string);
-    console.log(string1);
+    //     if(dice === 6){
+    //         console.log(`Loop is about to end ...`);
+    //     }
+    // }

@@ -37,4 +37,4 @@ const printForecast = (arr) => {
 const data1 = [17, 21, 23];
 const data2 = [12, 5, -5, 0, 4];
 console.log(printForecast(data1));
-printForecast(data2);
+printForecast('...' + data2);

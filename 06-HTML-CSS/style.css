@@ -1,0 +1,77 @@
+/* select all element */
+/* using * */
+
+/* border box */
+/* if dont use the border box, then the size will surpass the width that is initialized before */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 241, 193);
+  font-family: Arial;
+  font-size: 20px;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* . is for class selector */
+.first {
+  color: red;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* # for id selector */
+#your-name {
+  background-color: yellow;
+  border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+/* box model */
+/* 1. content 
+    => text and images etc
+2. width
+3. height
+4. padding = between border and content model
+    => transparent area inside box
+5. border
+    => goes around the padding of the content
+6. margin 
+    => between the boxes
+*/
+
+/* coma used for multiple select */
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#course-image{
+  width: 300px;
+}
+
+#your-name h2{
+  color: olivedrab;
+}

@@ -10,7 +10,7 @@ const buttonOpenModal = document.querySelectorAll('.show-modal');
 console.log(buttonOpenModal);
 
 const openModal = function () {
-    console.log('Button Clicked');
+    // console.log('Button Clicked');
 
     // to remove hidden class
     // using remove
@@ -39,3 +39,23 @@ buttonCloseModal.addEventListener('click', closeModal);
 // to close the modal
 // if click outside the modal
 overlay.addEventListener('click', closeModal);
+
+
+// press esc to exit modal
+// there is 3 type of key
+// 1. key up
+// kebalikan key down
+// 2. key down
+// after press down key
+// 3. key press
+// press continously
+document.addEventListener('keydown', function (event) {
+
+    // console.log(event.key);
+
+    if (event.key === "Escape" && !modal.classList.contains('hidden')) {
+
+        // to check class was hidden or not
+        closeModal();
+    }
+});

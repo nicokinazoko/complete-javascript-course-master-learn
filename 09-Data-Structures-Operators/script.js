@@ -47,6 +47,11 @@ const restaurant = {
 
     orderPasta: function (ing1, ing2, ing3) {
         console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+    },
+
+    orderPizza: function (mainIngredient, ...otherIngredients) {
+        console.log(mainIngredient);
+        console.log(otherIngredients);
     }
 };
 
@@ -233,4 +238,130 @@ const restaurant = {
 
 
 // ======== Rest Pattern and Rest Parameters ========
+// to collect multiple element to array
+/// to pack element to array
+
+// destructuring
+
+// // SPREAD, because on RIGHT side of
+// const arr = [1, 2, ...[3, 4]];
+
+
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+// console.log(a, b, others);
+
+
+// const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, risotto, otherFood);
+
+
+// // with objects
+// const {
+//     sat,
+//     ...weekdays
+// } = restaurant.openingHours;
+// console.log(sat, weekdays);
+
+
+// // function
+// const add = function (...numbers) {
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += numbers[i];
+//     }
+//     console.log(sum);
+// };
+// add(2, 3);
+// add(2, 3, 4, 5);
+// add(2, 3, 4, 5, 6, 7, 8);
+
+// const x = [23, 5, 7];
+// add(...x);
+
+// // using rest parameters with restaurant
+// restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
+// restaurant.orderPizza('Mushrooms');
+
+
+
+// // ======== Short Circuiting ========
+// // && and || can use any data type
+// // return any data type
+// // short circuiting
+
+
+// console.log('===== || =====');
+// // will output the truth result
+// // search until got true result
+// console.log(3 || 'Nico');
+// console.log('' || 'Nico');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+
+// // restaurant objects
+// restaurant.numGuests = 23;
+// const guess1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guess1);
+
+// const guess2 = restaurant.numGuests || 10;
+// console.log(guess2);
+
+
+// console.log('===== && =====');
+// // will output the true if all true
+// // if there any false value then output the false value
+// console.log(0 && 'Nico');
+// console.log(3 && 'Nico');
+
+// if (restaurant.orderPizza) {
+//     restaurant.orderPizza('Mushroom', 'Spinach');
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'Spinach')
+
+
+
+// // ======== Nullish Coalescing Operators ========
+// // restaurant.numGuests = 0;
+// // nullish : null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
+
+// ======== Logical Assignment  Operators ========
+
+const rest1 = {
+    name: 'Capri',
+    // numGuest: 20,
+    numGuest: 0,
+};
+
+const rest2 = {
+    name: 'La Piazza',
+    owner: 'Giovanni Rossi',
+};
+
+// or assignment operator
+// rest1.numGuest = rest1.numGuest || 10;
+// rest2.numGuest = rest2.numGuest || 10;
+
+// rest1.numGuest ||= 10;
+// rest2.numGuest ||= 10;
+
+// nullish assingment operators
+rest1.numGuest ??= 10;
+rest2.numGuest ??= 10;
+
+// and assignment operators
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
+
 

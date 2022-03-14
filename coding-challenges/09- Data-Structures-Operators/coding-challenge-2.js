@@ -65,34 +65,34 @@ const game = {
 // }
 // GOOD LUCK �
 
-// 1.
-// loop goal scored
-for (const [index, player] of game.scored.entries()) {
-    console.log(`Goal ${index} : ${player}`);
-}
+// // 1.
+// // loop goal scored
+// for (const [index, player] of game.scored.entries()) {
+//     console.log(`Goal ${index} : ${player}`);
+// }
 
-// 2
-let average = 0;
-const odds = Object.values(game.odds);
-for (const odd of odds) {
-    average += odd;
-}
-average /= odds.length;
-console.log(average);
+// // 2
+// let average = 0;
+// const odds = Object.values(game.odds);
+// for (const odd of odds) {
+//     average += odd;
+// }
+// average /= odds.length;
+// console.log(average);
 
 
-// 3
-for (const [team, odd] of Object.entries(game.odds)) {
-    const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-    console.log(`Odd of ${teamStr}: ${odd}`);
-    // Odd of victory Bayern Munich: 1.33
-    // Odd of draw: 3.25
-    // Odd of victory Borrussia Dortmund: 6.5
-}
+// // 3
+// for (const [team, odd] of Object.entries(game.odds)) {
+//     const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//     console.log(`Odd of ${teamStr}: ${odd}`);
+//     // Odd of victory Bayern Munich: 1.33
+//     // Odd of draw: 3.25
+//     // Odd of victory Borrussia Dortmund: 6.5
+// }
 
-// 4
-const scorers = {};
-for(const player of game.scored){
-    scorers[player] ? scorers[player]++ : (scorers[player] = 1);
-}
-console.log(scorers);
+// // 4
+// const scorers = {};
+// for(const player of game.scored){
+//     scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+// }
+// console.log(scorers);

@@ -458,3 +458,160 @@ const restaurant = {
 //     }] of entries) {
 //     console.log(`On the ${key} we open at ${open} and close at ${close}`);
 // }
+
+
+// // ======== Sets ========
+// // Sets
+// // one of data structures
+// // collection of unique values
+// // to get unique values
+
+// const ordersSet = new Set(
+//     [
+//         'Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta',
+//         'Pizza'
+//     ]);
+
+// console.log(ordersSet);
+
+// console.log(new Set('Nico'));
+
+// // to know length
+// console.log(ordersSet.size);
+
+// // to check if any
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
+
+// // add element
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+
+// // delete element
+// ordersSet.delete('Risotto');
+// console.log(ordersSet);
+
+// // delete all element
+// // ordersSet.clear();
+// // console.log(ordersSet);
+
+// for (const order of ordersSet) {
+//     console.log(order);
+// }
+
+// // big use case
+// // example
+// // to remove duplicate array
+// const staff = [
+//     'Waiter',
+//     'Chef',
+//     'Waiter',
+//     'Manager',
+//     'Chef',
+//     'Waiter'
+// ];
+
+// // make array from set
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+// console.log(new Set([
+//     'Waiter',
+//     'Chef',
+//     'Waiter',
+//     'Manager',
+//     'Chef',
+//     'Waiter'
+// ]).size);
+// console.log(new Set('NicoNico').size);
+
+
+// ======== Maps ========
+// to map values to keys
+// similiar to object
+// keys not just string
+
+// const rest = new Map();
+
+// // fill the map
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, `Firenze, Italy`);
+// rest.set(2, `Lisbon, Portugal`);
+// console.log(rest);
+
+// rest.set('categories',
+//         ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+//     .set('open', 11)
+//     .set('close', 23)
+//     .set(true, 'We are open :D')
+//     .set(false, 'We are closed :(');
+
+// // to get data
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+// console.log(rest.get(1));
+
+// // example
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// // check if maps contain certain key
+// console.log(rest.has('categories'));
+
+// // delete data
+// rest.delete(2);
+// console.log(rest);
+
+// // map size
+// console.log(rest.size);
+
+// // use array as map keys
+// const arr = [1, 2];
+// rest.set(arr, 'Test');
+// rest.set(document.querySelector('h1'), "Heading");
+// console.log(rest);
+
+// // to get data
+
+// console.log(rest.get(arr));
+
+
+// // ======== Maps Iteration ========
+// // populating a new map without set
+
+// const question = new Map([
+//     ['question', 'What is the best programming language  in the world '],
+//     [1, 'C'],
+//     [2, 'Java'],
+//     [3, 'Javascript'],
+//     ['correct', 3],
+//     [true, 'Correct'],
+//     [false, 'Try again']
+// ]);
+
+// console.log(question);
+
+// // convert object to maps
+// const hoursMap = new Map(Object.entries(hours));
+// console.log(hoursMap);
+
+// // iteration
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//     if (typeof (key) === 'number') {
+//         console.log(`Answer ${key}: ${value}`);
+//     }
+// }
+
+// // const answer = Number(prompt('Your answer'));
+// // console.log(answer);
+
+// // console.log(question.get(question.get('correct') === answer));
+
+// // convert map to array
+// console.log(...question);
+// console.log([...question.entries()]);
+// console.log([...question.keys()]);
+
+
+
+// ======== Working with String : 1 ========

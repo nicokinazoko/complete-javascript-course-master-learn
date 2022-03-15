@@ -1,8 +1,8 @@
 'use strict';
 
 // Data needed for a later exercise
-const flights =
-    '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//     '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
 
@@ -615,3 +615,222 @@ const restaurant = {
 
 
 // ======== Working with String : 1 ========
+
+// const airLine = 'TAP Air Portugal';
+// const plane = 'A320';
+
+// // to get string position
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737' [0]);
+
+// // to get length
+// console.log(airLine.length);
+// console.log('B737'.length);
+
+
+// console.log(airLine.indexOf('r'));
+// console.log(airLine.lastIndexOf('r'));
+
+// // case sensitive
+// console.log(airLine.indexOf('Portugal'));
+
+// // slices method
+// // to cut string from position in parameter
+// // will return a string
+// // to use slice save in variable
+// console.log(airLine.slice(4));
+// console.log(airLine.slice(4, 7));
+
+
+// // to get first string without knowing string
+// console.log(airLine.slice(0, airLine.indexOf(' ')));
+// // to get Last string without knowing string
+// console.log(airLine.slice(airLine.lastIndexOf(' ') + 1));
+
+// // if negative in parameter then wil go from last character
+// console.log(airLine.slice(-2));
+// console.log(airLine.slice(1, -1));
+
+// const checkMiddleSeat = (seat) => {
+//     // B and E are middle seats
+//     const s = seat.slice(-1);
+//     if (s === 'B' || s === 'E') {
+//         console.log(`You got the middle seat 😊`);
+//     } else {
+//         console.log(`You got lucky`);
+//     }
+// }
+
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+
+// console.log(new String('Nico'));
+// console.log(typeof new String('Nico'));
+// console.log(typeof new String('Nico').slice(1));
+
+
+// // ======== Working with String : 2 ========
+
+// // to make string all big or all small
+// console.log(airLine.toLowerCase());
+// console.log(airLine.toUpperCase());
+
+// // fix capitalization in name
+// const passenger = 'nICo'; // Nico;
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// // comparing email
+// const email = 'hello@nico.io';
+// const loginEmail = '  Hello@Nico.Io  \n';
+
+// // convert to lowercase
+// // const lowerEmail = loginEmail.toLowerCase();
+
+// // // to remove character
+// // const trimmedEmail = lowerEmail.trim();
+// // console.log(trimmedEmail);
+
+// // do in 1 step
+// const normalizeEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizeEmail);
+
+// console.log(email === normalizeEmail);
+
+// // trim start and trim end
+
+
+// // to replacing string
+// const priceGB = '288,97£';
+// const priceUS = priceGB.replace('£', '$').replace(',', '.');
+
+// console.log(priceUS);
+
+// const announcement = 'All passengers come to boarding door 23. Boarding door 23';
+// console.log(announcement.replace('door', 'gate'));
+
+// // to replace all character
+// // console.log(announcement.replaceAll('door', 'gate'));
+
+// // use regex to replace all characters
+// console.log(announcement.replace(/door/g, 'gate'));
+
+
+// // Boolean return
+
+
+// // includes
+// // somewhere in string will return true
+// const plane = 'Airbus A320neo';
+// console.log(plane.includes('A320'));
+
+// // starts with
+// console.log(plane.startsWith('Air'));
+
+// if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+//     console.log('Part of the new Airbus Family');
+// }
+
+
+// // practice exercise
+// const checkBaggage = function (items) {
+//     const baggage = items.toLowerCase();
+//     if (baggage.includes('knife') || baggage.includes('gun')) {
+//         console.log('You are not allowed on board');
+//     } else {
+//         console.log('Welcome aboard!');
+//     }
+// }
+
+// checkBaggage('I have a laptop, some food, and a pocket Knife');
+// checkBaggage('Socks and Camera');
+// checkBaggage('Got some snacks and a gun for protection')
+
+
+// ======== Working with String : 2 ========
+
+// // split string
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Nico Nico'.split(' '));
+
+// const [firstName, lastName] = 'Nico Nico'.split(' ');
+
+// // join method
+// // opposite of split
+// const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+
+// console.log(newName);
+
+// // capitalize name
+// const passenger = 'jessica ann smith davis';
+
+// const capitalizeName = function (name) {
+//     const names = name.split(' ');
+//     const namesUpperCase = [];
+
+//     for (const n of names) {
+//         // namesUpperCase.push(n[0].toUpperCase() + n.slice(1));
+//         namesUpperCase.push(n.replace(n[0], n[0].toUpperCase()));
+//     }
+
+//     console.log(namesUpperCase);
+// }
+
+// capitalizeName(passenger);
+// capitalizeName('nico nico');
+
+
+// ======== Working with String : 3 ========
+
+// // padding
+// // to add string
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(25, '+').padEnd(30, '+'));
+// console.log('Nico'.padStart(25, '+').padEnd(30, '+'));
+
+// const maskCreditCard = function (number) {
+//     const str = number + '';
+//     const last = str.slice(-4);
+//     return last.padStart(str.length, '*');
+// }
+
+// console.log(maskCreditCard('34256787'));
+// console.log(maskCreditCard(34256787543243567));
+// console.log(maskCreditCard('34256787543243567'));
+
+
+// // repeat 
+// const message2 = 'Bad weather... All Departures Delayed... ';
+// console.log(message2.repeat(5));
+
+// const planeInLine = function (n) {
+//     console.log(`There are ${n} in line ${'✈️'}`.repeat(5));
+// }
+
+// planeInLine(5);
+// planeInLine(3);
+// planeInLine(12);
+
+
+// // ======== String Methods Practice ========
+
+// const flights =
+//     '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+// console.log(flights.split('+'));
+
+// const getCode = (str) => str.slice(0, 3).toUpperCase();
+
+
+// for (const flight of flights.split('+')) {
+//     // use destructuring
+//     const [type, from, to, time] = flight.split(';');
+
+//     const output = `${type.startsWith('_Delayed') ? 
+//     '🔴' : ' '}${type.replaceAll('_', ' ')} from ${getCode(from)} to ${getCode(to)} (${time.replace(':', 'h')})`.padStart(36, ' ');
+//     console.log(output);
+
+// }
